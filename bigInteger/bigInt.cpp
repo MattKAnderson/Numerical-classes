@@ -489,6 +489,7 @@ bool bigInt::operator>(const bigInt& rhs) const {
 }
 bool bigInt::operator==(const bigInt& rhs) const {
 	if (integer.size() != rhs.integer.size()) { return false; }
+	if (negative != rhs.negative) { return false; }
 	for (int i = 0; i < integer.size(); i++) {
 		if (integer[i] != rhs.integer[i]) { return false; }
 	}
